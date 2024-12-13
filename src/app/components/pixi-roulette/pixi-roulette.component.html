@@ -1,0 +1,8 @@
+<div class="roulette-container">
+  <div #pixiContainer class="w-100 h-100"></div>
+  <button [disabled]="isSpinning" (click)="spinWheel()">Spin</button>
+  <p *ngIf="winningNumber">Win number:
+    <span [ngStyle]="{'color': winningNumber.color.toLowerCase()}">{{ winningNumber.color }} {{ winningNumber.value }}
+    </span>
+  </p>
+</div>
